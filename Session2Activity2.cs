@@ -1,6 +1,12 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 using RestSharp;
+using System;
+using System.Collections.Generic;
 using System.Net;
+using System.Threading.Tasks;
 
+[assembly: Parallelize(Workers = 10, Scope = ExecutionScope.MethodLevel)]
 namespace Session2part2
 {
     [TestClass]
